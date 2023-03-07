@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  font-family: "appFont";
 }
 
 .App-logo {
@@ -35,4 +35,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: "appFont";  
+  src: local("TiltNeon-Regular-VariableFont_XROT,YROT"),
+    url("./Fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf") format("truetype");
 }

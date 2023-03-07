@@ -1,0 +1,17 @@
+.modelCon{
+    width: 640px;
+    height: 300px;
+    position: absolute;
+    background-color: whitesmoke;
+    color:black;
+    font-family: "appFont";
+    padding: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    z-index: 1;
+}

@@ -1,0 +1,58 @@
+.homeWrap {
+    display: flex;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentWrap {
+    text-align: center;
+}
+
+.appDescpt {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 23px;
+    text-align: center;
+    margin: 0;
+}
+
+.image {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createBtn {
+    border: none;
+    margin-top: 20px;
+    border-radius: 7px;
+    padding: 10px;
+
+    font-family: appFont;
+    font-size: 18px;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .aiLogo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}

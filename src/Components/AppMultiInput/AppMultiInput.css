@@ -1,0 +1,47 @@
+.multiInputCon {
+    display: flex;
+}
+
+.multiInputBox {
+    border: none;
+   
+    width: 200px;
+    height: 30px;
+   
+    border-radius: 7px;
+    font-family: appFont;
+    color: #0C0C0C;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+input:focus {
+    outline: none;
+    /* oranges! yey */
+}
+
+.multiInputVal {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.submitBtn{
+    cursor: pointer;
+}
+
+.submitIcon {
+    font-size: 22px;
+    padding-top: 4px;
+    margin-left: 9px;
+}
+
+.multiVal {
+
+    color: #0C0C0C;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-bottom: 10px;
+    padding: 3px;
+    margin-right: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
