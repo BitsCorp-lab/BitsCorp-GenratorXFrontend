@@ -1,18 +1,19 @@
-import { useState } from "react";
 import LoadingSvg from "../../../Assets/LoadingSvg";
 import AppModel from "../../../Components/AppModel/AppModel";
 import AppMultiInput from "../../../Components/AppMultiInput/AppMultiInput";
 import "./GenratorModal.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  downloadBtnState,
   handleCollectionNames,
   handleProjectName,
-  handleResponse,
   handleStage,
-  handleModalState,handleReset
+  handleModalState,
+  handleReset,
 } from "../../../Redux/Slices/GenratorX/genratorXSlice";
-import {genrateApplication,downloadApplication} from "../../../Redux/Slices/GenratorX/GenratorXActions"
+import {
+  genrateApplication,
+  downloadApplication,
+} from "../../../Redux/Slices/GenratorX/GenratorXActions";
 
 export const Stage1 = () => {
   const dispatch = useDispatch();
@@ -48,10 +49,10 @@ export const Stage1 = () => {
 export const Stage2 = () => {
   const dispatch = useDispatch();
 
-  let btnState = useSelector((state) => state.genratorX.downloadBtnState)
-  let projectName = useSelector((state) => state.genratorX.projectName)
-  let collectionNames = useSelector((state) => state.genratorX.collectionNames)
-  let response = useSelector((state) => state.genratorX.response)
+  let btnState = useSelector((state) => state.genratorX.downloadBtnState);
+  let projectName = useSelector((state) => state.genratorX.projectName);
+  let collectionNames = useSelector((state) => state.genratorX.collectionNames);
+  let response = useSelector((state) => state.genratorX.response);
 
   const handleProjectNameValue = (event) => {
     dispatch(handleProjectName(event.target.value));
@@ -62,22 +63,21 @@ export const Stage2 = () => {
   };
 
   const handleGenerate = () => {
-    if(projectName.length !== 0 && collectionNames.length !== 0){
-      dispatch(genrateApplication(projectName, collectionNames))
-    }else{
-      alert("Please Check Your Project Name And Collection Names")
+    if (projectName.length !== 0 && collectionNames.length !== 0) {
+      dispatch(genrateApplication(projectName, collectionNames));
+    } else {
+      alert("Please Check Your Project Name And Collection Names");
     }
-    
-  }
+  };
 
   const handleDownload = () => {
-    dispatch(downloadApplication(projectName))
-  }
+    dispatch(downloadApplication(projectName));
+  };
 
   const hideAppGenModal = () => {
-    dispatch(handleModalState("hide"))
-    dispatch(handleReset())
-  }
+    dispatch(handleModalState("hide"));
+    dispatch(handleReset());
+  };
   return (
     <>
       <div className="stage2Con">
@@ -94,14 +94,20 @@ export const Stage2 = () => {
           <div className="svgCon">
             <LoadingSvg />
           </div>
-          <button onClick={handleDownload} disabled={btnState} className="btns">Download</button>
-          <p style={{textAlign:"center"}}>{response}</p>
+          <button onClick={handleDownload} disabled={btnState} className="btns">
+            Download
+          </button>
+          <p style={{ textAlign: "center" }}>{response}</p>
           <div className="btnCon">
             <div className="docs">
               Collections name should be same as in database
             </div>
-            <button onClick={hideAppGenModal} className="btns">Cancle</button>
-            <button onClick={handleGenerate} className="btns">Generate</button>
+            <button onClick={hideAppGenModal} className="btns">
+              Cancle
+            </button>
+            <button onClick={handleGenerate} className="btns">
+              Generate
+            </button>
           </div>
         </div>
       </div>
