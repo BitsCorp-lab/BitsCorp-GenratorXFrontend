@@ -24,7 +24,7 @@ const AppMultiInput = ({ getValues }) => {
 
   useEffect(() => {
     getValues(multiVal)
-  },[multiVal])
+  },[multiVal,getValues])
 
 
   return (
